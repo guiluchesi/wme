@@ -1,0 +1,11 @@
+<section id="apartamento" class="parallax paradados" data-type="parallax" data-speed="10" ng-controller='Apartamento as apt'>
+  <div ng-repeat='item in apt.item' ng-class="{'laco': item.el == 'h3', 'dadosleft': apt.item.indexOf(item) % 2 !== 0, 'dadosright': apt.item.indexOf(item) % 2 == 0 && apt.item.indexOf(item) != 0, 'container': apt.item.indexOf(item) > 0}">
+    <img src="{{item.img}}" alt="">
+    <h3 ng-if="item.el == 'h3'" class="lacotxt">{{item.content}}</h3>
+    <p ng-if="item.el == 'p'">
+      <span ng-if="apt.item.indexOf(item) % 2 != 0">{</span>
+      <span ng-if="apt.item.indexOf(item) % 2 == 0 && apt.item.indexOf(item) != 0 ">}</span>
+      {{item.content}}
+    </p>
+  </div>  
+</section>

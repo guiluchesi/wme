@@ -1,0 +1,30 @@
+<header id="header" ng-controller='Header as header'>
+  <nav id="menu" class="navbar navbar-default fix" role="navigation">      
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Navegação móvel</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ng-repeat='menu in header.menu'>
+            <a ng-class="{'navbar-brand': menu.img !== undefined, 'nav-active': header.menu.indexOf(menu)==0}" href="{{menu.url}}">{{menu.nome}} 
+            <img ng-if='menu.img!==undefined' src="{{menu.img.src}}" alt="{{menu.img.alt}}" /></a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div><!-- /.container -->
+  </nav>  
+
+  <section class="row parallax menos shadow" data-type="parallax" data-speed="10">
+    <img src="{{header.img.src}}" alt="{{header.img.alt}}" class="banner1">
+  </section>
+</header>

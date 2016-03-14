@@ -164,14 +164,6 @@ PORTAL CODE
     border-color: #ebdece;
 }
 
-.navbar-brand, .navbar-brand:hover{
-    height: 142px;
-    padding: 25px 33px;
-    position: absolute;
-    border-radius: 50%;
-    background-color: #fff6eb;
-    top: -13px;
-}
 .fix{
     position:fixed;
     width:100%;
@@ -869,4 +861,45 @@ a:focus{
 
 .en-markup-crop-options div div:first-of-type {
     margin-left: 0px !important;
+}
+
+.navbar-default .navbar-brand {
+    position: absolute;
+    padding: 18px 27px !important;
+    height: 130px;
+    width: 130px;
+    background-color: #fff6eb;
+    border-radius: 50%;
+    top: -14px;
+    left: -5px;
+}
+
+.navbar-default .navbar-brand:hover {
+    background-image: none !important;
+    border: none !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #c3af97;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+@media (max-width: 991px) {
+    .navbar-default .navbar-nav > li > a {
+        font-size: 11px;
+        padding: 15px 4px;
+    }
+
+    .nav-active, .navbar-default .navbar-nav > li > a:hover {
+        background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 90%, rgb(212, 102, 130) 90%);
+        background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0) 90%, rgb(212, 102, 130) 90%);
+        background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 90%, rgb(212, 102, 130) 90%);
+        background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 90%, rgb(212, 102, 130) 90%);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 90%, rgb(212, 102, 130) 90%);
+    }
+}
+
+.navbar-default .navbar-nav > li:nth-child(6){
+    margin-left: 120px;
 }

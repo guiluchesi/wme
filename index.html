@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
   <head>
     <meta charset="utf-8">
     <title>WME</title>
@@ -16,12 +16,12 @@
   </head>
   <body>
     <header id="header">
-      <nav id="menu" class="navbar navbar-default fix" role="navigation">
+      <nav id="menu" class="navbar navbar-default fix" role="navigation" ng-controller='menuList as menu'>
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Navegação mobile</span>
+              <span class="sr-only">Navegação móvel</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -35,11 +35,7 @@
               <li><a href="#apartamento" class="">Diferenciais</a></li>
               <li><a href="#slider" class="nav-active">Lazer</a></li>
               <li><a href="#diferenciais" class="">Apartamento</a></li>
-            </ul>
-
-            <a class="navbar-brand" href="#"><img src="images/logo-nav.png" alt="Logo do Espaço Jacarandá"></a>
-                    
-            <ul class="nav navbar-nav navbar-right">
+              <li><a class="navbar-brand" href="#"><img src="images/logo-nav.png" alt="Logo do Espaço Jacarandá"></a></li>
               <li><a href="#localizacao">Localização</a></li>
               <li><a href="#contato">Contato</a></li>
               <li><a href="#contato" class="no_active">Realizações</a></li>
@@ -255,7 +251,9 @@
       </center>
     </footer>
 
-    <script src="js/bootstrap.min.js"></script>   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/slider.js"></script>
   </body>
 </html>

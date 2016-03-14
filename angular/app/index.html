@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html ng-app='wmeApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>WME</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="shortcut icon" href="http://www.espacojacaranda.com.br/img/fav.ico" type="image/x-icon">
+
+    <script src="js/jquery-2.1.1.min.js"></script> 
+  </head>
+  <body>
+    <header-drtv></header-drtv>
+    <section id="banana" class="parallax min" data-type="parallax" data-speed="10"></section>
+    <apt-drtv></apt-drtv>
+
+    <section id="slider">
+      <hgroup class="lazer">
+        <h2>Lazer <br> sob medida</h2>
+        <h3>com áreas ideais para todas as idades</h3>
+      </hgroup>
+
+      <ul class="seletores container center">
+        <li id="play"></li>
+        <li id="living"></li>
+        <li id="food"></li>
+        <li id="toy"></li>
+        <li id="games"></li>
+        <li id="fit"></li>
+      </ul>
+
+      <div class="superslider">
+        <div class="dark"></div>
+        <div class="slidercontent center">
+          <img src="" id="1" class="imgslider">
+          <i class="arrow left">&lt;</i>
+          <i class="arrow right">&gt;</i>
+        </div>
+      </div>
+    </section>
+    <!-- FECHA SECTION SLIDER -->
+
+    <dif-drtv></dif-drtv>
+
+    <section id="localizacao">
+      <div class="localizaleft">
+        <div class="localballon">
+          <hgroup class="localiza">
+            <h3>Localização próxima</h3>
+            <h4>Ao bar da praia, parque dos lagos e apenas 4 min do centro.</h4>
+          </hgroup>
+        </div>
+        <div>
+          <ul class="pontos">
+            <li class="firstponto">
+              <i class="ilocal localico"></i>
+              R. José Frazato - Santo Antônio <br>
+              <b>JAGUARIÚNA</b>
+            </li>
+            <li><i class="ialimenta localico"></i>Alimentação</li>
+            <li><i class="ifarma localico"></i>Farmácias</li>
+            <li><i class="icentro localico"></i>Centro comercial</li>
+            <li><i class="ieduca localico"></i>Educação</li>
+            <li><i class="iposto localico"></i>Posto de Gasolina</li>
+          </ul>
+        </div>
+      </div>
+      <a href="https://goo.gl/maps/afm35" target="_blank">
+        <div class="localizaright">
+          <img src="images/mapa.jpg" alt="Como chegar ao Espaço Jacarandá">            
+            <h3>Como chegar</h3>            
+        </div>
+      </a>
+    </section>
+    <!-- FECHA SECTION COMO CHEGAR -->
+
+    <section id="contato">
+      <div class="container">
+        <div class="cleft form">
+          <!-- <form name='contactForm' action="http://www.espacojacaranda.com.br/mail.php" method="post" enctype="multipart/form-data" novalidate> -->
+          <form name='contactForm' ng-controller='Val as val' ng-submit='' novalidate>
+            <fieldset>
+              <legend><i class="box"></i>Contato</legend>
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" ng-model='name' required>
+
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" ng-model='email' required>
+
+              <label for="fone">Telefone</label>
+              <input type="tel" pattern="[0-9]{9}" name="fone" id="fone" ng-model='tel' required>
+
+              <label for="assunto">Assunto</label>
+              <input type="text" name="assunto" id="assunto">
+
+              <label for="mensagem">Mensagem</label>
+              <textarea name="mensagem" id="mensagem"></textarea>
+
+              <button type="submit" class="btn" ng-disabled="contactForm.$invalid">Enviar</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="realleft">
+          <div id="realiza">
+            <h3><i class="box"></i> Realizações</h3>
+            <a href="http://wmempreendimentos.com.br/" target="_blank">
+              <img src="images/wme.jpg" alt="Logo WME Empreendimentos">
+            </a>
+          </div>
+          <div id="parceiros">
+            <h3><i class="box"></i> Parceiros</h3>
+            <img src="images/logoparceiros.jpg" alt="Empresas apoiadoras de vendas">
+          </div>
+          <div id="alerta">
+            <i class="ponto"></i>
+            <p>Imagens exclusivamente ilustrativas, podendo sofrer alterações sem prévio aviso, por se tratar de bem a ser construído. Perspectiva artística, meramente ilustrativa, que mostra a vegetação de porte adulto. O porte da vegetação na entrega do empreendimento será de acordo com o projeto paisagístico. Itens de decoração, mobiliário e de acabamento são meramente ilustrativos. Os apartamentos e as áreas comuns serão entregues conforme Memorial Descritivo do Projeto. Registro de Incorporação sob o nº R. 08 da matrícula 10.031, e patrim&amp;oacirc;nio da afetação nº R. 09 da matrícula 10.031 do CRI de Jaguariúna, em 24/09/2014. Imobiliárias autorizadas: ABYARA BROKERS INTERMEDIAÇÃO IMOBILIÁRIA LTDA. inscrita no CRECI-SP sob nº 20.363J, e CNPJ/MF, sob nº 09.564.811/0001-90, localizada na Av. Doutor Moraes Sales, 2.303, Nova Campinas - CEP 13092-111 - Tel.: (19) 3045-9800 - Campinas - SP - diariamente até as 21horas, inclusive sábados, domingos e feriados. CRECI 20.363-J.; e LOX EMPREENDIMENTOS IMOBILIáRIOS LTDA. inscrita no CRECI-SP sob nº 22.533J/SP, e CNPJ/MF sob nº 13.3939.631/0001-12, localizada à Rua Holanda, nº 265 - Centro, Jaguariúna/SP - CEP 13.820-000 - Tel.: (19) 3837-1379.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FECHA SECTION CONTATO -->
+          
+    <footer>
+      <center>
+        <a href="#header" class="">
+          <img src="images/logo-nav.png" alt="Logo do Espaço Jacarandá">
+        </a>
+      </center>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
